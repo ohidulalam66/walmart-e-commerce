@@ -5,3 +5,12 @@
 .font {
   font-family: "Glory", sans-serif;
 }
+
+/* header image sizing */
+.img-size {
+  width: 5%;
+}
+/* header color style  */
+.header-color {
+  color: #fdbb30;
+}

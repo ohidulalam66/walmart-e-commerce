@@ -59,8 +59,8 @@ const updatePrice = (id, value) => {
 
 // set innerText
 const setInnerText = (id, value) => {
-  const twoDecimalTotalTex = value.toFixed(2);
-  document.getElementById(id).innerText = twoDecimalTotalTex;
+  const twoDecimalTotalTax = value.toFixed(2);
+  document.getElementById(id).innerText = twoDecimalTotalTax;
 };
 
 // update delivery charge and total Tax
