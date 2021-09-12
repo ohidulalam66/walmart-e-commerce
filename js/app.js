@@ -1,5 +1,6 @@
+// fetch called API
 const loadProducts = () => {
-  const url = `https://fakestoreapi.com/products`;
+  const url = `https://raw.githubusercontent.com/ProgrammingHero1/ranga-store-api/main/ranga-api.json?fbclid=IwAR2mWZ8Sr0aCbPx2oNCcMepzyceQ3bdpTl6LWlec32yYFo2CFSh_B8QpGG4`;
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -10,16 +11,17 @@ loadProducts();
 const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
-    const image = product.images;
+
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `
-    <div class="single-product">
+    <div class="single-product p-3">
       <div>
-      <img class="product-image" src=${image}></img>
+      <img class="product-image img-fluid" src=${product.image}></img>
       </div>
       <h3>${product.title}</h3>
       <p>Category: ${product.category}</p>
+      <p><b>Rating Rate:</b> ${product.rating.rate}, <b>Rating count:</b> ${product.rating.count}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
       <button id="details-btn" class="btn btn-danger">Details</button>
@@ -28,6 +30,8 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+
+// total product update
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -37,23 +41,27 @@ const addToCart = (id, price) => {
   document.getElementById("total-Products").innerText = count;
 };
 
+// 
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  const converted = parseInt(element);
+  const converted = parseFloat(element);
   return converted;
 };
 
-// main price update function
+// main price update
 const updatePrice = (id, value) => {
   const convertedOldPrice = getInputValue(id);
   const convertPrice = parseFloat(value);
   const total = convertedOldPrice + convertPrice;
-  document.getElementById(id).innerText = Math.round(total);
+  const twoDecimalPrice = total.toFixed(2);
+  document.getElementById(id).innerText = twoDecimalPrice;
+  updateTotal();
 };
 
-// set innerText function
+// set innerText
 const setInnerText = (id, value) => {
-  document.getElementById(id).innerText = Math.round(value);
+  const twoDecimalTotalTex = value.toFixed(2);
+  document.getElementById(id).innerText = twoDecimalTotalTex;
 };
 
 // update delivery charge and total Tax
@@ -71,12 +79,14 @@ const updateTaxAndCharge = () => {
     setInnerText("delivery-charge", 60);
     setInnerText("total-tax", priceConverted * 0.4);
   }
+  updateTotal();
 };
 
-//grandTotal update function
+//grandTotal update
 const updateTotal = () => {
   const grandTotal =
     getInputValue("price") + getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+    const twoDecimalGrandTotal = grandTotal.toFixed(2);
+  document.getElementById("total").innerText = twoDecimalGrandTotal;
 };
