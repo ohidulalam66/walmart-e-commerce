@@ -5,40 +5,37 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FakeStore</title>
+  <title>walmart</title>
+
+  <!-- stylesheet css -->
   <link rel="stylesheet" href="./css/style.css" />
-  <!-- Latest compiled and minified CSS -->
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- google Montserrat  font  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- font Awesome -->
+  <script src="https://kit.fontawesome.com/d8ec4eda3b.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container">
+<body class="container font">
   <header></header>
-  <main class="main">
-    <div class="search-field">
-      <div class="search-box">
-        <input id="input-field" class="search-field" type="text" />
-        <button type="button" class="btn btn-primary search-button" data-toggle="button" aria-pressed="false"
-          autocomplete="off" id="search-btn" onclick="loadProducts()">
-          Search
-        </button>
-      </div>
+  <main>
+    <div class="input-group w-50 mx-auto my-3">
+      <input type="text" class="form-control fw-bold" placeholder="Search your products" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <button onclick="loadProducts()" class="btn btn-outline-secondary fw-bold" type="button" id="button-addon2">Search</button>
     </div>
     <div class="row">
-      <div class="col-md-9 col-lg-9 col-sm-7 g-4">
-        <div id="all-products" class="">
+      <div class="row-cols-md-3 g-4">
+        <div id="all-products">
           
         </div>
       </div>
-      <div class="col-md-3 col-lg-3 col-sm-5 cart-main">
-        <div class="cart" id="my-cart">
+      <div class="row-cols-md-4 shadow-lg p-3 mb-5 bg-body rounded">
+        <div id="my-cart">
           <table class="table">
             <thead>
-              <h1>My-Cart</h1>
+              <h1 class="fw-bold">My-Cart</h1>
               <tr>
                 <th scope="col"></th>
                 <th scope="col"></th>
