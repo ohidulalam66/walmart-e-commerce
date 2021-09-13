@@ -12,21 +12,23 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
 
-    const div = document.createElement("div");
-    div.innerHTML = `
-    <div class="card shadow mb-3 bg-body rounded p-2">
-    <img src="${product.image}"class="card-img-top img-fluid w-50 mx-auto" alt="...">
-      <div class="card-body">
-      <h4 class= "fw-bold">${product.title}</h4>
-      <p><b>Category:</b> ${product.category}</p>
-      <p><b> <i class="fas fa-star"></i> Rating Rate:</b> ${product.rating.rate}, <b> <i class="fas fa-american-sign-language-interpreting"></i> Rating count:</b> ${product.rating.count}</p>
-      <h2><b>Price:</b> $${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-dark">Details</button>
-      </div>
-    </div>
-      `;
-    document.getElementById("all-products").appendChild(div);
+    // Each card adds a data container through a loop
+    const div = document.createElement('div');
+        div.classList.add('col');
+        div.innerHTML = `
+        <div class="card shadow mb-3 bg-body rounded p-3">
+          <img src="${product.image}"class="card-img-top img-fluid w-50 mx-auto" alt="...">
+          <div class="card-body">
+            <h4 class= "fw-bold">${product.title}</h4>
+            <p><b>Category:</b> ${product.category}</p>
+            <p><b> <i class="fas fa-star"></i> Rating Rate:</b> ${product.rating.rate}, <b> <i class="fas fa-american-sign-language-interpreting"></i> Rating count:</b> ${product.rating.count}</p>
+            <h2><b>Price:</b> $${product.price}</h2>
+            <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-secondary">Add to cart</button>
+            <button id="details-btn" class="btn btn-dark">Details</button>
+          </div>
+        </div>
+        `;
+        document.getElementById('all-prodects').appendChild(div);
   }
 };
 

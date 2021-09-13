@@ -10,7 +10,13 @@
 .img-size {
   width: 5%;
 }
+
 /* header color style  */
 .header-color {
   color: #fdbb30;
+}
+
+/* Background Color */
+.bg-color {
+  background: #cde2e3;
 }

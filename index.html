@@ -20,11 +20,11 @@
   <script src="https://kit.fontawesome.com/d8ec4eda3b.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="container font">
+<body class="container font bg-color">
   <header>
       <div class="d-flex align-items-center py-3">
         <img class="img-fluid img-size" src="images/walmart.png" alt="" >
-      <h1 class="">Wal<span class="fw-bold header-color">Mart</span></h1>
+      <h1 class="">Wal<span class="fw-bold header-color">Mart</span>.com</h1>
       </div>
   </header>
   <main>
@@ -32,62 +32,60 @@
       <input type="text" class="form-control fw-bold" placeholder="Search your products" aria-label="Recipient's username" aria-describedby="button-addon2">
       <button onclick="loadProducts()" class="btn btn-outline-secondary fw-bold" type="button" id="button-addon2">Search</button>
     </div>
-    <div class="row">
-      <div class="row-cols-md-3 g-4">
-        <div id="all-products">
-          
-        </div>
-      </div>
-      <div class="row-cols-md-3 shadow-lg p-3 mb-5 bg-body rounded">
-        <div id="my-cart">
-          <table class="table">
-            <thead>
-              <h1 class="fw-bold">My-Cart</h1>
-              <tr>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>Total Added-Products:</th>
-                <td><span id="total-Products">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Price:</th>
-                <td>$ <span id="price">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Delivery-Charge:</th>
-                <td>$ <span id="delivery-charge">20</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th>Total-Tax:</th>
-                <td>$ <span id="total-tax">0</span></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <th scope="row">Total</th>
-                <td colspan="2">$ <span id="total">0</span></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
-          <div class="parces text-center">
-            <button class="btn btn-primary text-center">Buy Now</button>
+      <div class="w-75 h-100 mx-auto">
+        <div id="my-cart" class="shadow-lg p-3 mb-5 bg-body rounded">
+          <div>
+            <table class="table">
+              <thead>
+                <h1 class="fw-bold">My-Cart</h1>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>Total Added-Products:</th>
+                  <td><span id="total-Products">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Price:</th>
+                  <td>$ <span id="price">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Delivery-Charge:</th>
+                  <td>$ <span id="delivery-charge">20</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>Total-Tax:</th>
+                  <td>$ <span id="total-tax">0</span></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Total</th>
+                  <td colspan="2">$ <span id="total">0</span></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="parces text-center">
+              <button class="btn btn-primary text-center">Buy Now</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div id="all-prodects" class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+      </div>
   </main>
   <footer></footer>
 
