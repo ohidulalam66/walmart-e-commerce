@@ -1,13 +1,17 @@
 /* Google font link */
 
-@import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
 
 /* Google font css */
 
 .font {
-  font-family: "Glory", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
+/* background color */
+.bg-color {
+  background: #e5f4f4;
+}
 /* header color */
 .header-bgcolor {
   background: #0071dc;
