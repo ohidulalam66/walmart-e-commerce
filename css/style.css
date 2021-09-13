@@ -1,7 +1,9 @@
 /* Google font link */
+
 @import url("https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,300&display=swap");
 
 /* Google font css */
+
 .font {
   font-family: "Glory", sans-serif;
 }
@@ -11,19 +13,22 @@
   background: #0071dc;
 }
 /* header image sizing */
-.img-size {
+
+.header-img {
   width: 5%;
 }
 
 /* header color style  */
+
 .header-color {
   color: #fdbb30;
 }
 
 /* card effect css */
+
 .card {
   border-radius: 4px;
-  background: #fff;
+  background: #681e1e;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
   padding: 14px 80px 18px 36px;
