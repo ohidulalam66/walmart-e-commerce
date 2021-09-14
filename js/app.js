@@ -22,7 +22,7 @@ const showProducts = (products) => {
             <h4 class= "text-primary fw-lighter">${product.title}</h4>
             <p><b>Category:</b> ${product.category}</p>
             <p><b> <i class="text-warning fas fa-star"></i> Rating Rate:</b> ${product.rating.rate}</p>
-            <p><b> <i class="text-success fas fa-american-sign-language-interpreting"></i> Rating count:</b> ${product.rating.count}</p>
+            <p><b> <i class="text-success fas fa-american-sign-language-interpreting"></i> Rating Count:</b> ${product.rating.count}</p>
             <h2><b>Price:</b> $${product.price}</h2>
             <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-danger">Add to cart</button>
             <button id="details-btn" class="btn btn-success">Details</button>
